@@ -1,0 +1,104 @@
+.header-search-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 1rem 2rem;
+  background-color: $crema-suave;
+  border-bottom: 2px solid $dark-obsidian;
+
+  h1 {
+    font-family: $font-main;
+    color: $dark-obsidian;
+    margin: 0;
+  }
+}
+
+.search-wrapper {
+  position: relative; // Para que el hint flote debajo
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  border: 2px solid $dark-obsidian;
+  border-radius: 8px;
+  padding: 4px;
+  width: 260px;
+  height: 36px;
+  box-shadow: 3px 3px 0px $dark-obsidian;
+
+  .search-button {
+    background-color: $chestnut-rose;
+    border: 2px solid $dark-obsidian;
+    border-radius: 6px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.1s;
+
+    &:active { transform: translate(1px, 1px); }
+  }
+
+  .search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 8px;
+    font-family: $font-mono;
+    font-size: 0.8rem;
+    background: transparent;
+    color: $dark-obsidian;
+  }
+}
+
+// Estilo para el aviso del Hook
+.search-hint {
+  position: absolute;
+  top: 42px; // Justo debajo del buscador
+  left: 0;
+  right: 0;
+  background-color: $amarillo-melocoton;
+  border: 2px solid $dark-obsidian;
+  border-radius: 6px;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 3px 3px 0px $dark-obsidian;
+  z-index: 10;
+  animation: slideIn 0.2s ease-out;
+
+  .hint-text {
+    font-family: $font-mono;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: $dark-obsidian;
+    text-transform: uppercase;
+  }
+
+  .go-button {
+    background-color: $electric-blue;
+    color: $white;
+    border: 1px solid $dark-obsidian;
+    font-family: $font-mono;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    cursor: pointer;
+    box-shadow: 1px 1px 0px $dark-obsidian;
+
+    &:hover { background-color: $dark-obsidian; }
+  }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

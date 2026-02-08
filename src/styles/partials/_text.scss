@@ -25,3 +25,7 @@ $text-sizes: (
     font-size: var(--text-#{$name}) !important;
   }
 }
+
+.text-center {
+    text-align: center;
+}

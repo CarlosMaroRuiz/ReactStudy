@@ -8,7 +8,9 @@ export default defineConfig({
     alias: {
       // El alias '@' ayuda a evitar errores de rutas relativas complicadas
       '@': path.resolve(__dirname, './src'),
+      "@assets": path.resolve(__dirname, './src/assets'),
       '@common': path.resolve(__dirname, './src/common'),
+      "@components": path.resolve(__dirname, './src/common/components'),
       "@navigation": path.resolve(__dirname, './src/core/navigation'),
     },
   },
@@ -22,6 +24,7 @@ export default defineConfig({
         @import "@/styles/partials/common/_buttons.scss";
         @import "@/styles/partials/features/_welcome.scss";
         @import "@/styles/partials/features/_layouts.scss";
+        @import "@/styles/partials/_text.scss";
       `
     }
   }

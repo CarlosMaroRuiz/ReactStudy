@@ -14,11 +14,12 @@ export default function RenderMarkdown({ markdown, className = 'renderMd' }: Ren
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         components={{
-          code({ node, inline, className, children, ...props }) {
+          code({ node, className, children, ref, ...props }) {
+            const { inline } = props as any
             const match = /language-(\w+)/.exec(className || '')
             return !inline && match ? (
               <SyntaxHighlighter
-                style={vscDarkPlus}
+                style={vscDarkPlus as any}
                 language={match[1]}
                 PreTag="div"
                 {...props}

@@ -1,0 +1,1 @@
+export { default as ReduxNote } from "./redux.note";

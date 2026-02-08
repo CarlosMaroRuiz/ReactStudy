@@ -5,7 +5,9 @@ const SearchLayout = () => {
   return (
     <>
       <HeaderSearch />
+      <main className="content-wrapper">
         <Outlet /> 
+      </main>
     </>
   );
 };

@@ -9,3 +9,183 @@ body {
   font-family: $font-mono;
 }
 
+.renderMd {
+  height: 100%;
+  overflow: auto;
+  padding: 1.5rem;
+  background-color: $crema-suave;
+  color: $dark-obsidian;
+  font-family: $font-main;
+  
+  // Títulos
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-main;
+    font-weight: 600;
+    color: $dark-obsidian;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    border-bottom: 3px solid $chestnut-rose;
+    padding-bottom: 0.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid $amarillo-melocoton;
+    padding-bottom: 0.4rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    color: $chestnut-rose;
+  }
+  
+  h4 {
+    font-size: 1.25rem;
+  }
+  
+  // Párrafos y texto
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+  
+  // Links
+  a {
+    color: $electric-blue;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s ease;
+    
+    &:hover {
+      border-bottom: 1px solid $electric-blue;
+    }
+  }
+  
+  // Listas
+  ul, ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    
+    li {
+      margin-bottom: 0.5rem;
+      
+      &::marker {
+        color: $chestnut-rose;
+      }
+    }
+  }
+  
+  // Código inline
+  code {
+    background-color: $dark-obsidian;
+    color: $amarillo-melocoton;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: $font-mono;
+  }
+  
+  // Bloques de código
+  pre {
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid $dark-obsidian;
+    
+    code {
+      background-color: transparent;
+      padding: 0;
+      border-radius: 0;
+      font-family: $font-mono;
+    }
+  }
+  
+  // Blockquotes
+  blockquote {
+    border-left: 4px solid $chestnut-rose;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    background-color: $white;
+    padding: 1rem;
+    border-radius: 4px;
+    font-style: italic;
+    color: lighten($dark-obsidian, 10%);
+  }
+  
+  // Tablas
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    background-color: $white;
+    border-radius: 8px;
+    overflow: hidden;
+    
+    thead {
+      background-color: $dark-obsidian;
+      color: $crema-suave;
+      
+      th {
+        padding: 0.75rem;
+        text-align: left;
+        font-family: $font-main;
+        font-weight: 600;
+      }
+    }
+    
+    tbody {
+      tr {
+        border-bottom: 1px solid lighten($dark-obsidian, 70%);
+        
+        &:hover {
+          background-color: lighten($amarillo-melocoton, 20%);
+        }
+        
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      
+      td {
+        padding: 0.75rem;
+        font-family: $font-mono;
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  // Línea horizontal
+  hr {
+    border: none;
+    border-top: 2px solid $amarillo-melocoton;
+    margin: 2rem 0;
+  }
+  
+  // Scrollbar personalizado
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $white;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $chestnut-rose;
+    border-radius: 4px;
+    
+    &:hover {
+      background: darken($chestnut-rose, 10%);
+    }
+  }
+}

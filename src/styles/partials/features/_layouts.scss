@@ -1,4 +1,11 @@
 .header-search-layout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  
   display: flex;
   align-items: center;
   justify-content: space-between; 
@@ -13,6 +20,10 @@
   }
 }
 
+
+.content-wrapper {
+  padding-top: 90px;
+}
 .search-wrapper {
   position: relative; // Para que el hint flote debajo
   display: flex;

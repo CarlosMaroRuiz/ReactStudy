@@ -47,8 +47,8 @@ $fractions: (
     --h-#{$name}: #{$value};
   }
   
-  // Variables para spacing (1-64)
-  @for $i from 1 through 64 {
+  // Variables para spacing (1-160)
+  @for $i from 1 through 160 {
     --spacing-#{$i}: #{$i * 0.25}rem;
   }
   
@@ -74,8 +74,8 @@ $fractions: (
   }
 }
 
-// --- GENERADOR w-1 hasta w-64 (usando variables) ---
-@for $i from 1 through 64 {
+// --- GENERADOR w-1 hasta w-160 (usando variables) ---
+@for $i from 1 through 160 {
   .w-#{$i} {
     width: var(--spacing-#{$i}) !important;
   }
@@ -89,8 +89,8 @@ $fractions: (
   }
 }
 
-// --- GENERADOR h-1 hasta h-64 (usando variables) ---
-@for $i from 1 through 64 {
+// --- GENERADOR h-1 hasta h-160 (usando variables) ---
+@for $i from 1 through 160 {
   .h-#{$i} {
     height: var(--spacing-#{$i}) !important;
   }

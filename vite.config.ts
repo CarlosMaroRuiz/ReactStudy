@@ -12,6 +12,7 @@ export default defineConfig({
       '@common': path.resolve(__dirname, './src/common'),
       "@components": path.resolve(__dirname, './src/common/components'),
       "@navigation": path.resolve(__dirname, './src/core/navigation'),
+      "@layouts": path.resolve(__dirname, './src/common/layouts'),
     },
   },
   css: {
@@ -21,7 +22,10 @@ export default defineConfig({
         @import "@/styles/partials/_variables.scss";
         @import "@/styles/partials/_utils.scss";
         @import "@/styles/partials/_size.scss";
+        @import "@/styles/partials/layouts/_layoutPage.scss";
         @import "@/styles/partials/common/_buttons.scss";
+        @import "@/styles/partials/common/_card.scss";
+        @import "@/styles/partials/common/_input.scss";
         @import "@/styles/partials/features/_welcome.scss";
         @import "@/styles/partials/features/_layouts.scss";
         @import "@/styles/partials/_text.scss";

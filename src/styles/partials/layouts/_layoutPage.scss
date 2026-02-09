@@ -1,0 +1,95 @@
+.layout-container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 250px 1fr;
+  grid-template-areas:
+    "header  header"
+    "aside   content"
+    "footer  footer";
+
+  // Si no hay aside, reconfiguramos las áreas
+  &.no-aside {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+  }
+
+  // Responsive para tablets (< 1024px)
+  @media (max-width: 1024px) {
+    grid-template-columns: 200px 1fr;
+  }
+
+  // Responsive para móviles (< 768px)
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "content"
+      "aside"
+      "footer";
+
+    &.no-aside {
+      grid-template-areas:
+        "header"
+        "content"
+        "footer";
+    }
+  }
+
+  .layout-header {
+    grid-area: header;
+    border-bottom: 1px solid rgba($dark-obsidian, 0.1);
+    padding: 1rem;
+    font-family: $font-main;
+
+    @media (max-width: 768px) {
+      padding: 0.75rem;
+    }
+  }
+
+  .layout-aside {
+    grid-area: aside;
+    background-color: $crema-suave;
+    border-right: 1px solid rgba($dark-obsidian, 0.1);
+    padding: 1rem;
+    font-family: $font-mono;
+
+    @media (max-width: 768px) {
+      border-right: none;
+      border-top: 1px solid rgba($dark-obsidian, 0.1);
+      padding: 0.75rem;
+    }
+  }
+
+  .layout-content {
+    grid-area: content;
+    padding: 2rem;
+    background-color: $white;
+    font-family: $font-main;
+
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      padding: 0.75rem;
+    }
+  }
+
+  .layout-footer {
+    grid-area: footer;
+    background-color: $dark-obsidian;
+    color: $white;
+    padding: 1rem;
+    text-align: center;
+    font-family: $font-mono;
+
+    @media (max-width: 768px) {
+      padding: 0.75rem;
+      font-size: 0.875rem;
+    }
+  }
+}

@@ -4,5 +4,5 @@ export interface ButtonType {
     onClick: () => void;
     disabled?: boolean;
     className?: string;
-    variant?: 'primary' | 'secondary'
+    variant?: 'primary' | 'secondary' | 'danger';
 }

@@ -1,4 +1,4 @@
-import type { ActionsFromMap } from "@/features/reducers/utils/mapper/actionFromMap";
+import type { ActionsFromMap } from "../../../utils/mapper/actionFromMap";
 
 // Definir el ActionMap específico para el reducer de Todo
 export type TodoActionMap = {
